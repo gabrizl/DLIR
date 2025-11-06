@@ -26,6 +26,6 @@ tensorflow: 2.4.1
 
 pandas: 1.2.2
 
-DLIR model has been implemented in mail.py file, model2.py contains some necessary files. 
+DLIR model has been implemented in main.py file, model2.py contains some necessary files. 
 
 Here we added only one dataset (Magic Kingdom). If you are interested to know about more datasets email at sajal.csedu01@gmail.com
