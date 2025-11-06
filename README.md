@@ -1,31 +1,52 @@
-# DLIR : Deep Learning of Dynamic POI Generation and Optimisation for Itinerary Recommendation
+# Replicação do DLIR: Deep Learning of Dynamic POI Generation and Optimisation for Itinerary Recommendation
 
-In this paper, we propose a deep learning model that addresses itinerary recommendations in a holistic approach that captures user dynamic interest and non-linear spatial dependencies. The proposed model performs in two steps, where the candidate selection policy generates a set of personalised candidate POIs and the itinerary construction step maximises user interest within budget time. To recommend an appropriate candidate set, we propose a multi-head, attention-based transformer to leverage periodic, trends and recent activities to capture user dynamic preferences. We also introduce new co-visiting patterns-based graph convolutional network (GCN) model to capture user non-linear spatial dependencies. To construct the full itinerary from the dynamic candidate sets, we apply greedy policy that incrementally constructs itineraries within the budget time, which aims to maximise user interest and minimise queuing time. Experimental results show that the proposed deep learning model outperforms state-of-the-art baselines in itinerary recommendation and next POI recommendation on eight real datasets.
+Este repositório contém a replicação do código original do modelo DLIR, proposto no artigo *"Deep Learning of Dynamic POI Generation and Optimisation for Itinerary Recommendation"*.
 
-To use this code in your research work please cite the following paper.
+O código foi replicado a partir do [repositório original](https://github.com/sajalhalder/DLIR) disponibilizado pelos autores.
 
-Sajal Halder, Kwan Hui Lim, Jeﬀrey Chan, and Xiuzhen Zhang. Deep Learning of Dynamic POI Generation and Optimisation for Itinerary Recommendation. Submitted to ACM Transactions on Recommender Systems, 2023. 
+## 🎯 Sobre o Projeto
 
-In this research work, we aim to answer the following research questions.
+A replicação busca reproduzir o funcionamento do modelo *deep learning* para recomendação de itinerários, que considera o interesse dinâmico do usuário, padrões espaciais complexos e tempos de fila entre Pontos de Interesse (POIs).
 
-      (i) How does the proposed deep learning model select better next top-k POIs for the recommendation?  
-     
-      (ii) Is the proposed deep learning model effective for full itinerary recommendation?  
-    
-      (iii) How do temporal user interest, co-visiting patterns and personalisation features perform in the recommendation? 
-    
-      (iv) Why does greedy policy-based itinerary construction perform better than the Monte Carlo Tree Search (MCTS) based itinerary construction?
-     
-# Implemtation Details
- 
-In this DLIR model implemenation, we have used transformer and GCN that have been implemented in python programing language. We use tensorflow, keras and attention machanism.
+Este código serviu de base para um estudo comparativo onde o modelo DLIR foi comparado com abordagens *shallow* (aprendizado raso).
 
-Required Packages:
+## ✨ Modelos e algoritmos implementados
 
-tensorflow: 2.4.1
+* **Arvore de Decisão**
+* **Random Forest**
+* **Regressão Logistica**
+* **LightGBM**
+* **XGBoost**
 
-pandas: 1.2.2
 
-DLIR model has been implemented in main.py file, model2.py contains some necessary files. 
+## 🛠️ Instalação
 
-Here we added only one dataset (Magic Kingdom). If you are interested to know about more datasets email at sajal.csedu01@gmail.com
+Recomenda-se criar um ambiente virtual (por exemplo, com `venv` ou `conda`) para isolar as dependências.
+
+1.  Clone o repositório:
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
+    cd SEU-REPOSITORIO
+    ```
+
+2.  Crie e ative um ambiente virtual (exemplo com `venv`):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # No Windows: .\venv\Scripts\activate
+    ```
+
+3.  Instale os pacotes necessários. Você pode criar um arquivo `requirements.txt` com o conteúdo abaixo e executar `pip install -r requirements.txt`.
+
+    **requirements.txt**
+    ```txt
+    tensorflow==2.4.1
+    pandas==1.2.2
+    ```
+
+## 🚀 Como Usar
+
+O script principal para treinar e avaliar o modelo é o `main.py`.
+
+```bash
+# Comando para executar o treinamento/avaliação
+python main.py
